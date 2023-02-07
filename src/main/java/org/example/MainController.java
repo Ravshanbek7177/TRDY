@@ -15,8 +15,9 @@ public class MainController {
         if(text.equals("/start")){
             SendMessage sendMessage = new SendMessage();
             sendMessage.setText("Assalomu aleykum Hush kelibsiz siz bu yerdan O'zizga keraklli prekt va tavarlani olshingiz mumkin");
-            sendMessage.setChatId(message.getChatId());
-            sendMessage.setReplyMarkup();
+            sendMessage.setChatId(String.valueOf(message.getChatId()));
+            sendMessage.setReplyMarkup(InlineKeyboardUtil.MEny());
+            myTelegramBot.sendMsg(sendMessage);
 
         }
     }
